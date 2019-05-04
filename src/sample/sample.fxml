@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.Controller">
+    <children>
+        <HBox VBox.vgrow="NEVER">
+            <children>
+                <Label text="Dane wejściowe:" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0"/>
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="input" onKeyReleased="#encode" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </TextField>
+                <ChoiceBox fx:id="algorithmBox" prefWidth="150.0">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </ChoiceBox>
+                <Button fx:id="encode" mnemonicParsing="false" onAction="#encode" text="Oblicz">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox>
+            <children>
+                <Label text="Dane kontrolne: ">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0"/>
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="binaryCode">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0"/>
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="hexCode">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0"/>
+                    </HBox.margin>
+                </Label>
+
+            </children>
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox>
+            <children>
+                <Label text="Zakodowane dane">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0"/>
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="encodedInput" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="decode" layoutX="223.0" layoutY="14.0" mnemonicParsing="false" onAction="#decode"
+                        prefHeight="32.0" prefWidth="129.0" text="Odbierz dane"/>
+                <Text fx:id="feedback" layoutX="2.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      textAlignment="CENTER" wrappingWidth="570.9999942779541"/>
+                <Label layoutX="14.0" layoutY="100.0" text="Dane wyjściowe"/>
+                <TextField fx:id="output" layoutX="147.0" layoutY="96.0" prefHeight="26.0" prefWidth="216.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
